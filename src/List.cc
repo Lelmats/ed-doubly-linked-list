@@ -87,18 +87,19 @@ void List::PrintFront()
     }
     else
     {
-        
+        temp = head;
+        head->next = head;
     }
-    
 }
 void List::PrintBack()
 {
     if(IsEmpty())
     {
-        std::cout << "Lista vacia" << std::endl;
+        std::cout << "Lista vacias" << std::endl;
     }
     else
     {
-        
+        temp = tail;
+        tail->back = head;
     }
 }
