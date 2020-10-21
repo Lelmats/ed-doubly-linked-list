@@ -81,25 +81,32 @@ bool List::IsEmpty() const
 }
 void List::PrintFront()
 {
+    Node* temp = head;
     if(IsEmpty())
     {
         std::cout << "Lista vacia" << std::endl;
+        return;
     }
-    else
+    while (temp)
     {
-        temp = head;
-        head->next = head;
+        std::cout << "Nombre del libro: " << temp->book->GetName() << std::endl;
+        std::cout << "Nombre del autor: " << temp->book->GetAuthor() << std::endl;
+        std::cout << "Libro 1" << std::endl;
+        temp = temp->next;
     }
 }
 void List::PrintBack()
 {
+    Node* temp = tail;
     if(IsEmpty())
     {
         std::cout << "Lista vacias" << std::endl;
     }
-    else
+    while (temp)
     {
-        temp = tail;
-        tail->back = head;
+        std::cout << "Nombre del libro: " << temp->book->GetName() << std::endl;
+        std::cout << "Nombre del autor: " << temp->book->GetAuthor() << std::endl;
+        std::cout << std::endl;
+        temp = temp->back;
     }
 }
